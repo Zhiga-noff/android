@@ -1,0 +1,283 @@
+@import "../colors";
+
+.main {
+    padding: 1.7rem 0 1.7rem;
+    //padding: 1.7rem 2rem 1.7rem 0.85rem;
+
+    @media screen and (max-width: 992px) {
+        padding: 1.5rem 0 1.8rem;
+        //padding: 1.5rem 1.2rem 1.8rem 0.4rem;
+    }
+
+    @media screen and (max-width: 639px) {
+        padding: 1.71rem 0;
+    }
+}
+
+
+.tabsContainer {
+    display: flex;
+    //max-width: 20rem;
+    margin: 0 auto 1.4rem;
+
+    justify-content: center;
+    //margin-bottom: 1.2rem;
+
+    @media screen and (max-width: 639px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    & .tab:last-child {
+        margin-right: 0;
+        @media screen and (max-width: 639px) {
+            margin-top: 1.3rem;
+        }
+    }
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+
+    margin-right: 4rem;
+    cursor: pointer;
+
+    @media screen and (max-width: 992px) {
+        margin-right: 0.7rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #3E3E3C;
+
+        @media screen and (max-width: 992px) {
+            font-size: 0.9rem;
+        }
+
+        @media screen and (max-width: 639px) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.circleStroke {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 0.05rem solid #DDDBDA;
+
+    padding: 0.15rem;
+    margin-right: 0.5rem;
+
+    @media screen and (max-width: 639px) {
+        padding: 0.1rem;
+    }
+
+    & div {
+        background-color: $redColor;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+}
+
+.rowInstructions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 1rem;
+
+    padding: 0 2rem 0.85rem;
+
+    @media screen and (max-width: 992px) {
+        flex-wrap: wrap;
+        padding: 0 1.2rem 0 0.4rem;
+    }
+
+    @media screen and (max-width: 639px) {
+        padding: 0 1.42rem 0 0.4rem;
+    }
+}
+
+.instructionElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto 0;
+
+    transition-duration: 0.3s;
+
+    &:hover {
+        @media screen and (min-width: 993px) {
+            transform: scale(1.1);
+        }
+    }
+
+    &:first-child {
+        margin-bottom: 1.5rem;
+        @media screen and (max-width: 639px) {
+            margin-bottom: 2.14rem;
+        }
+    }
+
+    &:last-child {
+        @media screen and (max-width: 639px) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        flex: 0 0 50%;
+    }
+
+    @media screen and (max-width: 639px) {
+        flex: 0 0 100%;
+        margin-bottom: 2.14rem;
+    }
+
+}
+
+.instructionImageContainer {
+    position: relative;
+
+    width: 16.1rem;
+    height: 9.6rem;
+
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 992px) {
+        width: 17.9rem;
+        height: 10.5rem;
+
+        margin-bottom: 0.8rem;
+    }
+
+    @media screen and (max-width: 639px) {
+        width: 21.14rem;
+        height: 12.43rem;
+
+    }
+}
+
+.index {
+    position: absolute;
+    z-index: 2;
+    width: 2.3rem;
+    height: 2.3rem;
+
+
+    border-radius: 50%;
+    border: 0.1rem solid white;
+
+    background-color: $beardedColor;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-weight: 900;
+
+    @media screen and (max-width: 992px) {
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: 0.7rem;
+    }
+
+    @media screen and (max-width: 639px) {
+        width: 2.28rem;
+        height: 2.28rem;
+        font-size: 1rem;
+    }
+}
+
+.image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 1.2rem 0 0 1.2rem;
+
+    @media screen and (max-width: 992px) {
+        padding: 0.8rem 0 0 0.8rem;
+    }
+
+
+    img {
+        object-fit: fill;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.description {
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-align: center;
+
+    max-width: 16.2rem;
+    padding-left: 1.2rem;
+
+    margin-bottom: 1rem;
+
+    span {
+        font-weight: 700;
+    }
+
+    @media screen and (max-width: 639px) {
+        margin-bottom: 0.71rem;
+    }
+
+
+   & a {
+        color: $redColor;
+       font-weight: 700;
+       text-decoration: underline;
+
+       &:visited {
+           color: $beardedColor !important;
+       }
+    }
+
+    @media screen and (max-width: 992px) {
+        padding-left: 0.8rem;
+    };
+
+    @media screen and (max-width: 639px) {
+        font-size: 1rem;
+        max-width: none;
+    }
+}
+
+.optional {
+    font-weight: 500;
+    color: #E20714;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.button {
+    display: block;
+    text-align: center;
+
+    max-width: 14.5rem;
+    margin: 0 auto 2.8rem;
+    @media screen and (max-width: 992px) {
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 639px) {
+        width: 18.57rem;
+        max-width: none;
+    }
+}

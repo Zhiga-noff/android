@@ -1,0 +1,175 @@
+@import "../colors";
+
+.main {
+    background: url("../../public/radial-blur.svg") 100% 0 no-repeat, $textColor;
+    background-blend-mode: lighten;
+    padding: 0 0 3.5rem;
+
+    @media screen and (max-width: 992px) {
+        background: $textColor;
+        padding: 1rem 1.2rem;
+    }
+
+    @media screen and (max-width: 639px) {
+        padding: 0.71rem 0.71rem 1.43rem;
+
+    }
+}
+
+header {
+    padding-left: 2rem;
+    margin-bottom: 2.3rem;
+    width: 100%;
+    position: absolute;
+    top: 2rem;
+
+    @media screen and (max-width: 992px) {
+        top: 1rem;
+        margin: 0 auto 1.1rem;
+        max-width: 6.3rem;
+        padding-left: 0;
+    }
+
+    @media screen and (max-width: 639px) {
+        margin-bottom: 1.43rem;
+    }
+
+    img {
+        max-width: 6.3rem;
+        cursor: pointer;
+    }
+}
+
+.row {
+    display: flex;
+    color: white;
+    padding-left: 2rem;
+
+    flex-wrap: nowrap;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    a {
+        display: block;
+        position: relative;
+        max-width: 20rem;
+
+        text-align: center;
+        cursor: pointer;
+        @media screen and (max-width: 992px) {
+            margin: 0 auto 1.2rem;
+            max-width: 12.5rem;
+        }
+
+        @media screen and (max-width: 639px) {
+            max-width: 15.85rem;
+            margin-bottom: 1.71rem;
+        }
+
+    }
+}
+
+.containerLeft {
+    //width: 27.6rem;
+    //margin-right: 4.2rem;
+    flex:1 1 auto ;
+
+    @media screen and (max-width: 992px) {
+        padding: 2rem;
+        width: 100%;
+        margin-right: 0;
+    }
+    @media screen and (max-width: 639px){
+        padding: 3rem 0 0;
+    }
+}
+
+.title {
+    width: 25.8rem;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    line-height: normal;
+
+    @media screen and (max-width: 992px) {
+        font-size: 1.8rem;
+        width: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: 639px) {
+        font-size: 1.71rem;
+        margin-bottom: 1.43rem;
+    }
+}
+
+.description {
+    width: 33.25rem;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 992px) {
+        text-align: center;
+        width: auto;
+    }
+
+    @media screen and (max-width: 639px) {
+        font-size: 1.43rem;
+        line-height: normal;
+    }
+}
+
+.subtitle {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    @media screen and (max-width: 992px) {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 639px) {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+}
+
+.image {
+    //height: 31.7rem;
+    flex:1 0 41.7rem ;
+    width: 41.7rem;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: 992px) {
+        //height: 17.6rem;
+        flex: auto;
+        width: 20rem;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 639px) {
+        height: auto;
+        width: 100%;
+    }
+
+
+    img {
+        object-fit: cover;
+        width: 100%;
+
+        @media screen and (max-width: 639px) {
+            height: auto;
+            width: 100%;
+        }
+
+    }
+}
+
+

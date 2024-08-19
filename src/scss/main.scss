@@ -1,0 +1,94 @@
+// Добавляем обнуляющий стиль
+@import 'nullstyle';
+
+// Добавляем шаблоны цветов
+@import 'colors';
+
+// Добавляем шрифт
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+
+html {
+    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1440 - 320)));
+    //overflow-x: hidden;
+    @media screen and (max-width: 992px) {
+        font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (768 - 320)));
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: normal;
+    font-weight: 500;
+    overflow-x: hidden;
+    color: $textColor;
+
+}
+
+.title {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 900;
+
+    @media screen and (max-width: 992px) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    @media screen and (max-width: 639px) {
+        font-size: 1.71rem;
+        line-height: 2.14rem;
+    }
+}
+
+.button {
+    @extend %button;
+
+    @media screen and (max-width: 992px) {
+        font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 639px) {
+        font-size: 1.28rem;
+    }
+}
+
+@keyframes exampleAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.mouse {
+    width: 1.5rem;
+    height: 3.1rem;
+
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+        //display: none;
+        animation: exampleAnimation 0.5s ease-in-out infinite;
+    }
+
+    @media screen and (min-width: 993px) {
+
+        animation: exampleAnimation 0.5s ease-in-out 2;
+
+    }
+
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
