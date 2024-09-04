@@ -9,20 +9,30 @@ import { TitleTemplate } from '../title-template/TitleTemplate';
 export const InstallBlock = ({ installBlockRef, broadcastRef }) => {
   const [typeInstall, setTypeInstall] = useState('browser');
 
+  const linkProgram = {
+      Rustor:'https://www.rustore.ru/catalog/app/ru.infolio.zvezdatv',
+      AppGallery: 'https://appgallery.huawei.ru/app/C109571413',
+      GetApps: 'https://global.app.mi.com/details?lo=RU&la=ru&id=ru.infolio.zvezdatv'
+  }
+
+  const title = `Приложение «Звезда» доступно бесплатно в магазине приложений вашего смартфона, в <a href="${linkProgram.Rustor}" target="_blank">RuStore</a>,
+<a href="${linkProgram.AppGallery}" target="_blank">AppGallery</a> (Huawei), <a href="${linkProgram.GetApps}" target="_blank">GetApps</a> (Xiaomi).
+  Если вы не нашли приложение в магазине вашего смартфона,  то его можно установить вручную`
+
   return (
     <section className={style.main} ref={installBlockRef}>
       <TitleTemplate
         color={false}
         image={label}
-        title={'Простая установка'}
+        title={'Установка приложения'}
         subtitle={
-          'Приложение «Звезда» доступно бесплатно в магазине приложений вашего смартфона,  в RuStore, AppGallery (Huawei), GetApps (Xiaomi). Если вы не нашли приложение в магазине вашего смартфона,  то его можно установить вручную.'
+          title
         }
       />
 
       <nav className={style.tabsContainer}>
         <Tab typeInstall={typeInstall} setType={setTypeInstall} type={'browser'}>
-            Rustore и аналоги
+            Rustore
         </Tab>
         <Tab typeInstall={typeInstall} setType={setTypeInstall} type={'flashcard'}>
             Установить вручную
@@ -44,7 +54,7 @@ export const InstallBlock = ({ installBlockRef, broadcastRef }) => {
           }
         })}
       </div>
-        {/*<a href="https://tvzvezda.ru/zvezda_androidtv.apk" download={'zvezda_android_tv.apk'} className={`button ${style.button}`}>Скачать приложение</a>*/}
+        <a href="https://tvzvezda.ru/zvezda_androidtv.apk" download={'zvezda_android_tv.apk'} className={`button ${style.button}`}>Скачать приложение</a>
       <MouseIcon color={'#33353F'} reference={broadcastRef} />
     </section>
   );

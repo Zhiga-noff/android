@@ -10,7 +10,7 @@ export const TitleTemplate = ({color, image, title, subtitle}) => {
                 <img src={image} alt=""/>
             </div> : <></>}
 
-            <p className={`${style.subtitle} ${color && style.white}`}>{subtitle}</p>
+            <p className={`${style.subtitle} ${color && style.white}`} dangerouslySetInnerHTML={{ __html: subtitle }}/>
         </>
     );
 };

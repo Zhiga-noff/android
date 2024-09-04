@@ -33,11 +33,10 @@ export const BroadcastsBlock = ({ broadcastRef }) => {
         <SliderContainer broadcastImage={broadcastImage} config={sliderConfig} />
       )}
       <a
-        href="#"
-        // download={''}
+        href="https://tvzvezda.ru/sp/smart/"
         className={`button ${style.button}`}
       >
-Установить
+          Приложение для СМАРТ ТВ
       </a>
       <p className={style.description}>{`© ${actualDate} ОАО «ТРК ВС РФ «ЗВЕЗДА»`}</p>
       <a

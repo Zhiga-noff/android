@@ -72,7 +72,17 @@
 .subtitle {
     text-align: center;
     margin: 0 auto 2.25rem;
-    max-width: 46rem;
+    max-width: 42rem;
+
+    a {
+        color: $redColor;
+        text-decoration: underline;
+        transition-duration: .3s;
+
+        &:visited {
+            color: $beardedColor !important;
+        }
+    }
 
     @media screen and (max-width: 992px) {
         font-size: 0.7rem;

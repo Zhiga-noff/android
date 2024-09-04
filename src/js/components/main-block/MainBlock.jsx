@@ -18,14 +18,14 @@ export const MainBlock = ({ installBlockRef }) => {
       <div className={style.row}>
         <div className={style.containerLeft}>
           {/*<h1 className={`title ${style.title}`}>*/}
-          {/*    Приложение «Звезда» для СМАРТ ТВ*/}
+          {/*    Приложение «Звезда» для смартфонов*/}
           {/*</h1>*/}
-            <h1 className={`title ${style.description}`}>Прямой эфир, программы, новости, документальные циклы и фильмы, стримы ведущих телеканала "ЗВЕЗДА" в вашем смартфоне</h1>
+            <h1 className={`title ${style.description}`}>Прямой эфир, программы, новости, документальные циклы и фильмы, стримы ведущих телеканала «ЗВЕЗДА» в вашем смартфоне</h1>
           <p className={style.subtitle}>
               Приложение для смартфонов на базе операционной системы Android
           </p>
-          <a className={`button`} href={'#'} /*onClick={() => smoothScroll(installBlockRef)}*/>
-              Установить
+          <a className={`button`} onClick={() => smoothScroll(installBlockRef)}>
+              Прочитать инструкцию
           </a>
         </div>
         <div className={style.image}>
